@@ -1,6 +1,6 @@
 print("----- Aventura Matemática: ¡A por el tesoro, Jack!🏝️🏴‍☠️ -----")
 nivel = 1
-puntuacion = 0
+archivo = open("puntos.txt", "w")
 while nivel > 0 and nivel < 11:
     try:
         match nivel:
@@ -17,7 +17,7 @@ while nivel > 0 and nivel < 11:
                     print("Resultado correcto ✔. PASASTE AL SIGUIENTE NIVEL ✨🤗")
                     print("Sumaste 10 puntos 🎇")
                     nivel = nivel + 1
-                    puntuacion = puntuacion + 10
+                    archivo.write("NIVEL 1: 10 PUNTOS\n")
                 elif (resultado1 == 0):
                     print("JACK TE ESPERA PRONTO...🏝️🏴‍")
                     break
@@ -34,7 +34,7 @@ while nivel > 0 and nivel < 11:
                     print("Resultado correcto ✔. PASASTE AL SIGUIENTE NIVEL ✨🤗")
                     print("Sumaste 10 puntos 🎇")
                     nivel = nivel + 1
-                    puntuacion = puntuacion + 10
+                    archivo.write("NIVEL 2: 10 PUNTOS\n")
                 elif (resultado2 == 0):
                     print("JACK TE ESPERA PRONTO...🏝️🏴‍")
                     break
@@ -51,7 +51,7 @@ while nivel > 0 and nivel < 11:
                     print("Resultado correcto ✔. PASASTE AL SIGUIENTE NIVEL ✨🤗")
                     print("Sumaste 10 puntos 🎇")
                     nivel = nivel + 1
-                    puntuacion = puntuacion + 10
+                    archivo.write("NIVEL 3: 10 PUNTOS\n")
                 elif (resultado3 == 0):
                     print("JACK TE ESPERA PRONTO...🏝️🏴‍")
                     break
@@ -68,7 +68,7 @@ while nivel > 0 and nivel < 11:
                     print("Resultado correcto ✔. PASASTE AL SIGUIENTE NIVEL ✨🤗")
                     print("Sumaste 10 puntos 🎇")
                     nivel = nivel + 1
-                    puntuacion = puntuacion + 10
+                    archivo.write("NIVEL 4: 10 PUNTOS\n")
                 elif (resultado4 == 0):
                     print("JACK TE ESPERA PRONTO...🏝️🏴‍")
                     break
@@ -85,7 +85,7 @@ while nivel > 0 and nivel < 11:
                     print("Resultado correcto ✔. PASASTE AL SIGUIENTE NIVEL ✨🤗")
                     print("Sumaste 10 puntos 🎇")
                     nivel = nivel + 1
-                    puntuacion = puntuacion + 10
+                    archivo.write("NIVEL 5: 10 PUNTOS\n")
                 elif (resultado5 == 0):
                     print("JACK TE ESPERA PRONTO...🏝️🏴‍")
                     break
@@ -102,7 +102,7 @@ while nivel > 0 and nivel < 11:
                     print("Resultado correcto ✔. PASASTE AL SIGUIENTE NIVEL ✨🤗")
                     print("Sumaste 10 puntos 🎇")
                     nivel = nivel + 1
-                    puntuacion = puntuacion + 10
+                    archivo.write("NIVEL 6: 10 PUNTOS\n")
                 elif (resultado6 == 0):
                     print("JACK TE ESPERA PRONTO...🏝️🏴‍")
                     break
@@ -119,7 +119,7 @@ while nivel > 0 and nivel < 11:
                     print("Resultado correcto ✔. PASASTE AL SIGUIENTE NIVEL ✨🤗")
                     print("Sumaste 10 puntos 🎇")
                     nivel = nivel + 1
-                    puntuacion = puntuacion + 10
+                    archivo.write("NIVEL 7: 10 PUNTOS\n")
                 elif (resultado7 == 0):
                     print("JACK TE ESPERA PRONTO...🏝️🏴‍")
                     break
@@ -136,7 +136,7 @@ while nivel > 0 and nivel < 11:
                     print("Resultado correcto ✔. PASASTE AL SIGUIENTE NIVEL ✨🤗")
                     print("Sumaste 10 puntos 🎇")
                     nivel = nivel + 1
-                    puntuacion = puntuacion + 10
+                    archivo.write("NIVEL 8: 10 PUNTOS\n")
                 elif (resultado8 == 0):
                     print("JACK TE ESPERA PRONTO...🏝️🏴‍")
                     break
@@ -153,7 +153,7 @@ while nivel > 0 and nivel < 11:
                     print("Resultado correcto ✔. PASASTE AL SIGUIENTE NIVEL ✨🤗")
                     print("Sumaste 10 puntos 🎇")
                     nivel = nivel + 1
-                    puntuacion = puntuacion + 10
+                    archivo.write("NIVEL 9: 10 PUNTOS\n")
                 elif (resultado9 == 0):
                     print("JACK TE ESPERA PRONTO...🏝️🏴‍")
                     break
@@ -169,8 +169,9 @@ while nivel > 0 and nivel < 11:
                     resultado10 = int(input("🚩 Ingrese el resultado: "))
                 if (resultado10 == 146):
                     print("Resultado correcto ✔. AYUDASTE A JACK A LLEGAR AL FINAL ✨🤗")
-                    puntuacion = puntuacion + 10
-                    print(f"¡FELICITACIONES! SUMASTE {puntuacion} PUNTOS🎇")
+                    archivo.write("NIVEL 10: 10 PUNTOS\n")
+                    archivo.close()
+                    print(f"¡FELICITACIONES! SUMASTE 100 PUNTOS🎇")
                     break
                 elif (resultado10 == 0):
                     print("JACK TE ESPERA PRONTO...🏝️🏴‍")

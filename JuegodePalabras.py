@@ -1,6 +1,5 @@
 import random 
 
-# Lista de palabras para el juego
 palabras = ["programacion", "desarrollo", "ingenieria", "universidad", "tecnologia", "computadora", "estudiante", "matematicas", "algoritmo"]
 
 def desordenar_palabra(palabra):
@@ -15,13 +14,12 @@ def juegodepalabras():
     seguir_jugando = True
 
     while seguir_jugando:
-        # Selecciona una palabra al azar de la lista
+        
         palabra_correcta = random.choice(palabras)
         palabra_desordenada = desordenar_palabra(palabra_correcta)
 
         print(f"\nLa palabra desordenada es: {palabra_desordenada}")
         
-        # Inicializa las variables para los intentos
         intentos = 0
         adivinanza = None
         
@@ -34,11 +32,9 @@ def juegodepalabras():
             else:
                 print("Incorrecto. Inténtalo de nuevo.")
         
-        # Pregunta al usuario si quiere seguir jugando
         respuesta = input("¿Quieres jugar otra vez? (sí/no): ").strip().lower()
         if respuesta != "sí" and respuesta != "si":
             seguir_jugando = False
             print("¡Gracias por jugar! Hasta la próxima.")
             
-# Llamada a la función para iniciar el juego
 juegodepalabras()
